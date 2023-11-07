@@ -18,7 +18,7 @@ prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
-llm = ChatOpenAI(temperature=0)
+llm = ChatOpenAI(temperature=0 , model_name="gpt-3.5-turbo")
 memory = ConversationBufferMemory(return_messages=True)
 conversation = ConversationChain(memory=memory, prompt=prompt, llm=llm)
 
